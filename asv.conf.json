@@ -6,60 +6,17 @@
     // The name of the project being benchmarked
     "project": "PlasmaPy",
 
-    // The project's homepage
     "project_url": "http://www.plasmapy.org/",
 
-    // The URL or local path of the source code repository for the
-    // project being benchmarked
     "repo": "https://github.com/PlasmaPy/PlasmaPy.git",
+    //"repo": "/your/local/repository/",
 
-    // The Python project's subdirectory in your repo.  If missing or
-    // the empty string, the project is assumed to be located at the root
-    // of the repository.
-    // "repo_subdir": "",
-
-    // Customizable commands for building, installing, and
-    // uninstalling the project. See asv.conf.json documentation.
-    //
-    // "install_command": ["in-dir={env_dir} python -mpip install {wheel_file}"],
-    // "uninstall_command": ["return-code=any python -mpip uninstall -y {project}"],
-    // "build_command": [
-    //     "python setup.py build",
-    //     "PIP_NO_BUILD_ISOLATION=false python -mpip wheel --no-deps --no-index -w {build_cache_dir} {build_dir}"
-    // ],
-
-    // List of branches to benchmark. If not provided, defaults to "master"
-    // (for git) or "default" (for mercurial).
-    // "branches": ["master"], // for git
-    // "branches": ["default"],    // for mercurial
-
-    // The DVCS being used.  If not set, it will be automatically
-    // determined from "repo" by looking at the protocol in the URL
-    // (if remote), or by looking for special directories, such as
-    // ".git" (if local).
-    // "dvcs": "git",
-
-    // The tool to use to create environments.  May be "conda",
-    // "virtualenv" or other value depending on the plugins in use.
-    // If missing or the empty string, the tool will be automatically
-    // determined by looking for tools on the PATH environment
-    // variable.
     "environment_type": "virtualenv",
 
-    // timeout in seconds for installing any dependencies in environment
-    // defaults to 10 min
-    //"install_timeout": 600,
-
     // the base URL to show a commit for the project.
-    // "show_commit_url": "http://github.com/PlasmaPy/PlasmaPy/commit/",
+    "show_commit_url": "http://github.com/PlasmaPy/PlasmaPy/commit/",
 
-    // The Pythons you'd like to test against.  If not provided, defaults
-    // to the current version of Python used to run `asv`.
-    // "pythons": ["3.7"],
-
-    // The list of conda channel names to be searched for benchmark
-    // dependency packages in the specified order
-    // "conda_channels": ["conda-forge", "defaults"],
+    "pythons": ["3.7"],
 
     // The matrix of dependencies to test.  Each key is the name of a
     // package (in PyPI) and the values are version numbers.  An empty
