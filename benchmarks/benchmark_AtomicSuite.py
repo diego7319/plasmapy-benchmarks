@@ -8,6 +8,7 @@ from plasmapy.atomic import (
     stable_isotopes,
     isotopic_abundance,
     integer_charge,
+    reduced_mass,
 )
 
 
