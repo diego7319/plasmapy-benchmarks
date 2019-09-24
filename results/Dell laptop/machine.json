@@ -1,0 +1,9 @@
+{
+    "arch": "x86_64",
+    "cpu": "cpu [Intel(R) Core(TM) i7-7700HQ CPU @ 3.00GHz] (4 cores)",
+    "machine": "Dell laptop",
+    "num_cpu": "4",
+    "os": "Linux 5.2.1-arch1-1-ARCH",
+    "ram": "16286632",
+    "version": 1
+}
