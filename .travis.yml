@@ -1,0 +1,22 @@
+# based on previous work by @astrofrog for the Astropy project at
+# https://github.com/astropy/astropy-benchmarks/
+
+language: python
+
+cache: ccache
+
+sudo: false
+
+python:
+  - 3.7
+
+env:
+  global:
+    - MPLBACKEND=Agg
+
+install:
+  - pip install asv
+  - asv machine --machine Travis --os unknown --arch unknown --cpu unknown --ram unknown
+
+script:
+  - asv dev
