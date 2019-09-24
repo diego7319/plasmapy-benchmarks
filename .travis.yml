@@ -1,0 +1,23 @@
+# based on previous work by @astrofrog for the Astropy project at
+# https://github.com/astropy/astropy-benchmarks/commit/31b17d1993481df198427a956cb091d4d27f97b7
+language: python
+
+sudo: false
+
+python:
+  - 3.7
+
+install:
+  - pip install git+https://github.com/airspeed-velocity/asv
+  - asv machine --machine Travis --os unknown --arch unknown --cpu unknown --ram unknown
+
+# This auto-deploys the generated website to the gh-pages branch. This requires the
+# GITHUB_USER and GITHUB_API_KEY variables to be set as secure variables through
+# the Travis web interface. The former should be set to a GitHub username, and the
+# second to a personal access token with scope 'public_repo'
+
+script:
+  - travis_wait 30 asv gh-pages --no-push
+  - git config --global user.name "Automated PlasmaPy committer"
+  - git config --global user.email "Automated PlasmaPy committer"
+  - if [[ $TRAVIS_EVENT_TYPE != pull_request && $TRAVIS_BRANCH == results ]]; then git push -q -f https://$GITHUB_USER:$GITHUB_API_KEY@github.com/$TRAVIS_REPO_SLUG gh-pages; fi
