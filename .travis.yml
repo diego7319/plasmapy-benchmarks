@@ -19,4 +19,4 @@ install:
   - asv machine --machine Travis --os unknown --arch unknown --cpu unknown --ram unknown
 
 script:
-  - asv dev
+  - asv run
