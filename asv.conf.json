@@ -16,7 +16,7 @@
     // the base URL to show a commit for the project.
     "show_commit_url": "http://github.com/PlasmaPy/PlasmaPy/commit/",
 
-    "pythons": ["3.6","3.7"],
+    "pythons": ["3.7","3.6"],
 
     // The matrix of dependencies to test.  Each key is the name of a
     // package (in PyPI) and the values are version numbers.  An empty
