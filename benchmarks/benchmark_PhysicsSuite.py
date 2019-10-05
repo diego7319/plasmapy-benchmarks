@@ -13,11 +13,8 @@ from plasmapy.physics import (
 )
 
 #For dimensionless class
-""" Posible bug/ not importing
-from plasmapy.physics import (
-    quantum_theta,
-    beta
-)"""
+from plasmapy.physics.dimensionless import quantum_theta, beta
+
 
 #For distribution class
 from plasmapy.physics import (
@@ -32,14 +29,14 @@ from plasmapy.physics import (
 )
 
 #For parameters class
-from plasmapy.physics import (
-    #mass_density,
+from plasmapy.physics.parameters import (
+    mass_density,
     Alfven_speed,
     ion_sound_speed,
     thermal_speed,
-    #thermal_pressure,
+    thermal_pressure,
     kappa_thermal_speed,
-    #Hall_parameter,
+    Hall_parameter,
     gyrofrequency,
     gyroradius,
     plasma_frequency,
@@ -118,14 +115,10 @@ class dimensionless:
         pass
 
     def time_quantum_theta(self):
-        #quantum_theta(1*u.eV, 1e20*u.m**-3)
-        #quantum_theta(1*u.K, 1e26*u.m**-3)
-        pass
+        quantum_theta(1*u.eV, 1e20*u.m**-3)
 
     def time_beta(self):
-        #beta(1*u.eV, 1e20*u.m**-3, 1*u.T)
-        #beta(8.8e3*u.eV, 1e20*u.m**-3, 5.3*u.T)
-        pass
+        beta(1*u.eV, 1e20*u.m**-3, 1*u.T)
 
 
 class distribution:
@@ -208,8 +201,8 @@ class parameters:
         pass
 
     def time_mass_density(self):
-        #mass_density(1 * u.m ** -3)
-        pass
+        mass_density(1 * u.m ** -3)
+
 
     def time_Alfven_speed(self):
         Alfven_speed(1 * u.T,
@@ -226,9 +219,9 @@ class parameters:
         thermal_speed(1 * u.MK)
 
     def time_thermal_pressure(self):
-        #thermal_pressure(1*u.eV,
-        #                 1e20/u.m**3)
-        pass
+        thermal_pressure(1*u.eV,
+                         1e20/u.m**3)
+
 
     def time_kappa_thermal_speed(self):
         kappa_thermal_speed(5*u.eV,
@@ -237,7 +230,7 @@ class parameters:
                             'mean_magnitude')
 
     def time_Hall_parameter(self):
-        pass
+        Hall_parameter(1e6 / u.m ** 3,5e6*u.K,0.1*u.T,'He-4 +1')
 
     def time_gyrofrequency(self):
         gyrofrequency(0.01*u.T,
