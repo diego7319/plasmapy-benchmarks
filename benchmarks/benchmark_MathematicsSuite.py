@@ -17,11 +17,11 @@ class mathematics:
     def setup(self):
         pass
 
-    def plasma_dispersion_func(self):
+    def time_plasma_dispersion_func(self):
         plasma_dispersion_func(-1.52+0.47j)
 
-    def plasma_dispersion_func_deriv(self):
+    def time_plasma_dispersion_func_deriv(self):
         plasma_dispersion_func_deriv(-1.52+0.47j)
 
-    def Fermi_integral(self):
+    def time_Fermi_integral(self):
         Fermi_integral(1, 0)
