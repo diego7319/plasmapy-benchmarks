@@ -1,7 +1,7 @@
 """Functions from mathematics to benchmark with aerospeed velocity """
 
 import astropy.units as u
-from plasmapy.mathematics import (
+from plasmapy.formulary import (
     plasma_dispersion_func,
     plasma_dispersion_func_deriv,
     Fermi_integral
