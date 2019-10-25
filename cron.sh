@@ -25,10 +25,12 @@ timeout 7200 taskset -c 0 asv run ALL --skip-existing-commits || true
 # asv run NEW || true
 # timeout 7200 asv run ALL --steps 10 --skip-existing-commits || true
 
-git add results/$MACHINE
+git checkout results
+git add "results/$MACHINE"
 git commit -m "New results from $MACHINE"
 
-git push origin master
+git push origin results
 asv gh-pages --no-push
 git push -f origin gh-pages
+git checkout master
 
