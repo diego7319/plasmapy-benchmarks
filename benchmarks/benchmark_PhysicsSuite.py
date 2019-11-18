@@ -201,7 +201,7 @@ class parameters:
         pass
 
     def time_mass_density(self):
-        mass_density(1 * u.m ** -3)
+        mass_density(1 * u.m ** -3,'p')
 
 
     def time_Alfven_speed(self):
